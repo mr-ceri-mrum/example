@@ -1,0 +1,13 @@
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\bin\Debug\net8.0\HomeDelivery.Order.Core.deps.json
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\bin\Debug\net8.0\HomeDelivery.Order.Core.dll
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\bin\Debug\net8.0\HomeDelivery.Order.Core.pdb
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.csproj.AssemblyReference.cache
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.AssemblyInfoInputs.cache
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.AssemblyInfo.cs
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.csproj.CoreCompileInputs.cache
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.sourcelink.json
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.dll
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\refint\HomeDelivery.Order.Core.dll
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\HomeDelivery.Order.Core.pdb
+C:\delivery\homedelivery.order\HomeDelivery.Order\ HomeDelivery.Order.Core\obj\Debug\net8.0\ref\HomeDelivery.Order.Core.dll

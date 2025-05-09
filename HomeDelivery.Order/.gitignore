@@ -1,0 +1,25 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.HomeDelivery.Order.iml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+HomeDelivery.Order.API/obj/
+HomeDelivery.Order.API/bin
+HomeDelivery.Order.Business/obj/
+HomeDelivery.Order.Business/bin/
+HomeDelivery.Order.DataAccess/obj/
+HomeDelivery.Order.DataAccess/bin/
+HomeDelivery.Order.Core/obj/
+HomeDelivery.Order.Core/bin/
+HomeDelivery.Order.Data/obj/
+HomeDelivery.Order.Data/bin/
+ 

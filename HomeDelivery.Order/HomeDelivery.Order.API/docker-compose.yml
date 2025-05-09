@@ -1,0 +1,66 @@
+﻿version: '3.9'
+networks:
+  default:
+    name: 'home'
+
+services: 
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    container_name: home-zk
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      
+  kafka-broker:
+    image: confluentinc/cp-kafka:7.6.0
+    container_name: home-kb
+    ports:
+      - '9092:9092'
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: home-zk:2181
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://home-kb:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+    depends_on:
+      - zookeeper
+  
+  redis:
+    image: redis:7.2-alpine
+    container_name: home-redis
+    ports:
+      - '6379:6379'
+    command: [ "redis-server", "--save", "60", "1", "--loglevel", "notice" ]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+   
+  redis-ui:
+      image: rediscommander/redis-commander:latest
+      container_name: home-redis-ui
+      ports:
+        - '8081:8081'
+      environment:
+        REDIS_HOSTS: "local:home-redis:6379"
+      depends_on:
+        - redis
+  
+  
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: home-kui
+    ports:
+      - '8082:8080'
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local-docker
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: home-kb:29092
+      KAFKA_CLUSTERS_0_KAFKACONNECT_0_NAME: domain-events-outbox
+      KAFKA_CLUSTERS_0_KAFKACONNECT_0_ADDRESS: http://home-jdbc-connect:8083
+    depends_on:
+      - kafka-broker

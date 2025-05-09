@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HomeDelivery.Order.Data/1.0.0": {
+        "runtime": {
+          "HomeDelivery.Order.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HomeDelivery.Order.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
